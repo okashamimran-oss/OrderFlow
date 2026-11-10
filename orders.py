@@ -110,7 +110,6 @@ def delete_order(
     
     order = get_own_order(order_id, db, current_user)
 
-    # Items delete hone se pehle stock wapas karo
     for item in order.order_items:
         item.product.stock += item.quantity
 
